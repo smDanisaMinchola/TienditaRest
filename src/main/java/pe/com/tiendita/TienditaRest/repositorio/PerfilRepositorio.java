@@ -13,6 +13,6 @@ import pe.com.tiendita.TienditaRest.entity.Perfil;
 
 public interface PerfilRepositorio extends JpaRepository<Perfil, Long>{
     
-        @Query("select c from Categoria c where c.estado='1'")
-    List<Perfil>findAllCustom();
+        @Query("select c from Perfil c where c.estado='1'")
+         List<Perfil>findAllCustom();
 }
