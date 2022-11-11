@@ -23,18 +23,18 @@ public class EmpleadoRestController {
     private EmpleadoServicio servicio;
    
     @GetMapping
-    public List<Empleado> findAll() {
-        return servicio.findAll();
+    public List<Empleado>findAll() {
+        return servicio.FinAlld();
     }
-     
+ 
    @GetMapping("/custom")
     public List<Empleado>finAllCustom(){
         return servicio.findAllCustom();
     }
-    
+       
     @GetMapping("/{id}")
     public Optional<Empleado>finById(@PathVariable long id){
-     return servicio.findbyId(id);
+     return servicio.findById(id);
     }
     
     @PostMapping
@@ -54,5 +54,4 @@ public class EmpleadoRestController {
         return servicio.delete(Empleado.builder().codigo(id).build());
         
     }
-    
 }

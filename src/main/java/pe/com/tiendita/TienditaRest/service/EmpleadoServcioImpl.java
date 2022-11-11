@@ -15,11 +15,7 @@ public class EmpleadoServcioImpl implements EmpleadoServicio{
     @Autowired
     private EmpleadoRepositorio repositorio;
     
-    
-    @Override
-    public List<Empleado> findAll() {
-       return repositorio.findAll();
-    }
+  
 
     @Override
     public List<Empleado> findAllCustom() {
@@ -27,10 +23,6 @@ public class EmpleadoServcioImpl implements EmpleadoServicio{
         
     }
 
-    @Override
-    public Optional<Empleado> findbyId(long id) {
-      return repositorio.findById(id);
-    }
 
     @Override
     public Empleado add(Empleado p) {
@@ -49,6 +41,16 @@ public class EmpleadoServcioImpl implements EmpleadoServicio{
         Empleado objempleado=repositorio.getById(p.getCodigo());
   objempleado.setEstado(false);
   return repositorio.save(objempleado);
+    }
+
+    @Override
+    public List<Empleado> FinAlld() {
+       return repositorio.findAll();
+    }
+
+    @Override
+    public Optional<Empleado> findById(long id) {
+        return repositorio.findById(id);
     }
     
 }
