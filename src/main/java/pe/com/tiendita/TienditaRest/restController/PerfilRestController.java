@@ -22,4 +22,5 @@ public class PerfilRestController {
     public List<Perfil> findAll() {
         return servicio.FinAlld();
     }
+    
 }
