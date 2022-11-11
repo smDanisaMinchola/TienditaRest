@@ -15,7 +15,7 @@ public class PerfilServiceImple  implements PerfilServicio{
 private PerfilRepositorio repositorio;
     
     @Override
-    public List<Perfil> FinAll() {
+    public List<Perfil> FinAlld() {
         return repositorio.findAll();
     }
 
@@ -50,5 +50,7 @@ private PerfilRepositorio repositorio;
   perfil.setEstado(false);
   return repositorio.save(perfil);
     }
+
+    
     
 }
