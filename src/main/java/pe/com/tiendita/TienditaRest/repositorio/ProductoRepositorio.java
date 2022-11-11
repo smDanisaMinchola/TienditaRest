@@ -11,4 +11,5 @@ import pe.com.tiendita.TienditaRest.entity.Producto;
 public interface ProductoRepositorio extends JpaRepository<Producto, Long>{
     @Query("select p from Producto p where p.estado='1'")
     List<Producto>findAllCustom();
+    
 }

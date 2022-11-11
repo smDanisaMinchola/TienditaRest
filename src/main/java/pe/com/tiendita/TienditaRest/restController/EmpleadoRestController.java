@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package pe.com.tiendita.TienditaRest.restController;
 
 import java.util.List;
@@ -15,44 +12,45 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import pe.com.tiendita.TienditaRest.entity.Perfil;
-import pe.com.tiendita.TienditaRest.service.PerfilServicio;
+import pe.com.tiendita.TienditaRest.entity.Empleado;
+import pe.com.tiendita.TienditaRest.service.EmpleadoServicio;
 
 @RestController
-@RequestMapping("/perfil")
-public class PerfilRestController {
-      @Autowired
-    private PerfilServicio servicio;
-
+@RequestMapping("/empleado")
+public class EmpleadoRestController {
+    @Autowired
+    private EmpleadoServicio servicio;
+   
     @GetMapping
-    public List<Perfil> findAll() {
-        return servicio.FinAlld();
+    public List<Empleado> findAll() {
+        return servicio.findAll();
     }
-    @GetMapping("/custom")
-    public List<Perfil>finAllCustom(){
+     
+   @GetMapping("/custom")
+    public List<Empleado>finAllCustom(){
         return servicio.findAllCustom();
     }
     
     @GetMapping("/{id}")
-    public Optional<Perfil>finById(@PathVariable long id){
-     return servicio.findById(id);
+    public Optional<Empleado>finById(@PathVariable long id){
+     return servicio.findbyId(id);
     }
     
     @PostMapping
-    public Perfil add(@RequestBody Perfil p){
+    public Empleado add(@RequestBody Empleado p){
         return servicio.add(p);
     }
     
     @PutMapping("/{id}")
-    public Perfil update(@PathVariable long id,@RequestBody Perfil p){
+    public Empleado update(@PathVariable long id,@RequestBody Empleado p){
         p.setCodigo(id);
         return servicio.update(p);
     }
      @DeleteMapping("/{id}")
-    public Perfil delete(@PathVariable long id){
-        Perfil objproducto=new Perfil();
+    public Empleado delete(@PathVariable long id){
+        Empleado objproducto=new Empleado();
         objproducto.setEstado(false);
-        return servicio.delete(Perfil.builder().codigo(id).build());
+        return servicio.delete(Empleado.builder().codigo(id).build());
         
     }
     
