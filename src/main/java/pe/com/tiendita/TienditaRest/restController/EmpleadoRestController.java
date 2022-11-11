@@ -18,6 +18,7 @@ import pe.com.tiendita.TienditaRest.service.EmpleadoServicio;
 @RestController
 @RequestMapping("/empleado")
 public class EmpleadoRestController {
+    
     @Autowired
     private EmpleadoServicio servicio;
    

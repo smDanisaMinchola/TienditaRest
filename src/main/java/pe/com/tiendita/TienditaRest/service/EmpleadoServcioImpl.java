@@ -1,7 +1,6 @@
 
 package pe.com.tiendita.TienditaRest.service;
 
-import ch.qos.logback.core.joran.util.beans.BeanUtil;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.BeanUtils;
@@ -22,7 +21,7 @@ public class EmpleadoServcioImpl implements EmpleadoServicio{
 
     @Override
     public List<Empleado> findAllCustom() {
-        return repositorio.finAllCustom();
+        return repositorio.findAllCustom();
         
     }
 
@@ -46,7 +45,6 @@ public class EmpleadoServcioImpl implements EmpleadoServicio{
     @Override
     public Empleado delete(Empleado p) {
         Empleado objempleado=repositorio.getById(p.getCodigo());
-    
   objempleado.setEstado(false);
   return repositorio.save(objempleado);
     }
