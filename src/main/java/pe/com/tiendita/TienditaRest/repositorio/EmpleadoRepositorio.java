@@ -12,6 +12,6 @@ import pe.com.tiendita.TienditaRest.entity.Empleado;
 
 public interface EmpleadoRepositorio extends JpaRepository<Empleado, Long>{
     
-    @Query("select e from Empleado e where e.estado='1'")
+     @Query("select c from Empleado c where c.estado='1'")
     List<Empleado>findAllCustom();
 }
