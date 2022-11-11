@@ -11,6 +11,8 @@ import pe.com.tiendita.TienditaRest.repositorio.PerfilRepositorio;
 
 @Service
 public class PerfilServiceImple  implements PerfilServicio{
+    
+    
 @Autowired
 private PerfilRepositorio repositorio;
     
