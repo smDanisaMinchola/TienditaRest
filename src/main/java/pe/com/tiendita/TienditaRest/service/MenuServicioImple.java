@@ -1,7 +1,6 @@
 
 package pe.com.tiendita.TienditaRest.service;
-
-
+/*
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.BeanUtils;
@@ -46,9 +45,11 @@ private MenuRepositorio repositorio;
     @Override
     public Menu delete(Menu p) {
        Menu menu =repositorio.getById(p.getCodigo());
-       menu.setCategoria(false);
+       menu.setEstado(false);
        return repositorio.save(menu);
     }
     
-    
-}
+  
+} 
+*/
+

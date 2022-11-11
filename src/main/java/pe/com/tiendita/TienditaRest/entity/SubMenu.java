@@ -1,3 +1,4 @@
+
 package pe.com.tiendita.TienditaRest.entity;
 /*
 import javax.persistence.Column;
@@ -5,8 +6,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,22 +16,23 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Entity(name = "Menu")
-@Table(name = "t_menu")
-public class Menu {
+@Entity(name = "SubMenu")
+@Table(name = "t_submenu")
+public class SubMenu {
 
     @Id
-    @Column(name = "codmen")
+    @Column(name = "codsme")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long codigo;
-    @Column(name = "nommen")
+    @Column(name = "nomsme")
     private String nombre;
-    @Column(name = "urlmen")
+    @Column(name = "urlsme")
     private String urlmen;
-    @Column(name = "icomen")
+    @Column(name = "icosme")
     private String icomen;
-     @Column(name = "estcat")
+     @Column(name = "estsme")
     private boolean estado;
 
 }
 */
+
