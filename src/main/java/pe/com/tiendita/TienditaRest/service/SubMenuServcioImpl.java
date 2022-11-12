@@ -1,14 +1,15 @@
 
 package pe.com.tiendita.TienditaRest.service;
-/*
+
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import pe.com.tiendita.TienditaRest.entity.SubMenu;
 import pe.com.tiendita.TienditaRest.repositorio.SubMenuRepositorio;
 
-@Servicio
+@Service
 public class SubMenuServcioImpl implements SubMenuServicio{
 
     @Autowired
@@ -49,4 +50,3 @@ public class SubMenuServcioImpl implements SubMenuServicio{
     } 
     
 }
-*/

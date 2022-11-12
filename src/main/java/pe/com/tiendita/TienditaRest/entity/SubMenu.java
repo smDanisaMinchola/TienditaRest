@@ -1,6 +1,6 @@
 
 package pe.com.tiendita.TienditaRest.entity;
-/*
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -34,5 +34,5 @@ public class SubMenu {
     private boolean estado;
 
 }
-*/
+
 

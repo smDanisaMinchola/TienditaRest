@@ -1,6 +1,6 @@
 
 package pe.com.tiendita.TienditaRest.service;
-/*
+
 import java.util.List;
 import java.util.Optional;
 import pe.com.tiendita.TienditaRest.entity.SubMenu;
@@ -17,4 +17,3 @@ public interface SubMenuServicio {
 
     public SubMenu delete(SubMenu p);
 }
-*/
