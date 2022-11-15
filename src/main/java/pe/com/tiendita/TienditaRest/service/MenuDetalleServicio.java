@@ -15,5 +15,5 @@ public interface MenuDetalleServicio {
 
     public MenuDetalle update(MenuDetalle p);
 
-    public MenuDetalle delete(MenuDetalle p);
+    public void delete(long id);
 }

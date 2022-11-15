@@ -5,10 +5,11 @@ import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import pe.com.tiendita.TienditaRest.entity.MenuDetalle;
 import pe.com.tiendita.TienditaRest.repositorio.MenuDetalleRepositorio;
 
-
+@Service
 public class MenuDetalleServicioImpl implements MenuDetalleServicio{
 
     @Autowired
@@ -34,10 +35,10 @@ public class MenuDetalleServicioImpl implements MenuDetalleServicio{
         return repositorio.save(menude);
     }
 
+
     @Override
-    public MenuDetalle delete(MenuDetalle p) {
-       MenuDetalle menu =repositorio.getById(p.getCodigo());
-       return repositorio.save(menu);
+    public void delete(long id) {
+     repositorio.deleteById(id);
     }
     
 }

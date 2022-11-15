@@ -12,42 +12,46 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import pe.com.tiendita.TienditaRest.entity.MenuDetalle;
-import pe.com.tiendita.TienditaRest.service.MenuDetalleServicio;
-
+import pe.com.tiendita.TienditaRest.entity.TicketPedido;
+import pe.com.tiendita.TienditaRest.service.TicketPedidoServicio;
 
 @RestController
-@RequestMapping("/menudetalle")
-public class MenuDetalleRestController {
+@RequestMapping("/ticket")
+public class TicketPedidoRestController {
     
     @Autowired
-    private MenuDetalleServicio servicio;
-       
-        @GetMapping
-    public List<MenuDetalle> findAll() {
-        return servicio.findAlld();
+    private TicketPedidoServicio servicio;
+
+    @GetMapping
+    public List<TicketPedido> findAll() {
+        return servicio.findAll();
     }
-   
-     @GetMapping("/{id}")
-    public Optional<MenuDetalle>finById(@PathVariable long id){
+    @GetMapping("/custom")
+    public List<TicketPedido> findAllCustom() {
+        return servicio.findAllCustom();
+    }
+    
+    @GetMapping("/{id}")
+    public Optional<TicketPedido>finById(@PathVariable long id){
      return servicio.findById(id);
     }
     
     @PostMapping
-    public MenuDetalle add(@RequestBody MenuDetalle p){
-        return servicio.add(p);
+    public TicketPedido add(@RequestBody TicketPedido c){
+        return servicio.add(c);
     }
     
-     @PutMapping("/{id}")
-    public MenuDetalle update(@PathVariable long id,@RequestBody MenuDetalle p){
-        p.setCodigo(id);
-        return servicio.update(p);
+    @PutMapping("/{id}")
+    public TicketPedido update(@PathVariable long id,@RequestBody TicketPedido c){
+        c.setCodigo(id);
+        return servicio.update(c);
     }
-     
+    
     @DeleteMapping("/{id}")
     public void elimina(@PathVariable("id")long id)
     {
-    servicio.delete(id);}
+    servicio.eliminar(id);
     
+    }
     
 }
