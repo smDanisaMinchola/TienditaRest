@@ -22,7 +22,6 @@ import lombok.NoArgsConstructor;
 public class DetallePedido{
     @Id
     private long id;
-    
     @ManyToOne
     @JoinColumn(name = "nrotic", nullable = false)
     private TicketPedido ticketpedido;
